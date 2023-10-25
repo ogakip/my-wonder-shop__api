@@ -23,9 +23,6 @@ export class Comment {
   @Column({ length: 158 })
   productId: string;
 
-  @Column("integer")
-  rating: number;
-
   @ManyToOne(() => User, (user) => user.comments)
   @JoinColumn({ name: "userId" })
   user: User;
